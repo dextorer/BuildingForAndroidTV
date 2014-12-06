@@ -1,0 +1,29 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.0.0"
+
+    defaultConfig {
+        applicationId "com.sgottard.tvdemoapp"
+        minSdkVersion 21
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:recyclerview-v7:+'
+    compile 'com.android.support:leanback-v17:+'
+    compile 'com.android.support:appcompat-v7:+'
+    compile 'com.squareup.picasso:picasso:2.3.2'
+}
