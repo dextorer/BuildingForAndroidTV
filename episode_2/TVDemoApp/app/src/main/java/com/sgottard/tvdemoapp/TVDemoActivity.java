@@ -34,7 +34,6 @@ public class TVDemoActivity extends Activity {
 
 		for (int i = 0; i < CATEGORIES_NUMBER; i++) {
 			CustomRowsFragment fragment = new CustomRowsFragment();
-			fragment.setCustomId(i);
 			fragments.put(i, fragment);
 		}
 	}

@@ -1,21 +1,25 @@
 package com.sgottard.tvdemoapp;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v17.leanback.app.RowsFragment;
 import android.support.v17.leanback.widget.ArrayObjectAdapter;
 import android.support.v17.leanback.widget.HeaderItem;
 import android.support.v17.leanback.widget.ListRow;
 import android.support.v17.leanback.widget.ListRowPresenter;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created by Sebastiano Gottardo on 08/11/14.
  */
 public class CustomRowsFragment extends RowsFragment {
 
-	private int id;
 	private final int NUM_ROWS = 5;
 	private final int NUM_COLS = 15;
 
@@ -23,18 +27,17 @@ public class CustomRowsFragment extends RowsFragment {
 	private CardPresenter cardPresenter;
 
 	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		View v = super.onCreateView(inflater, container, savedInstanceState);
+		v.setBackgroundColor(getRandomColor());
+		return v;
+	}
+
+	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
 
 		loadRows();
-	}
-
-	public void setCustomId(int id) {
-		this.id = id;
-	}
-
-	public int getCustomId() {
-		return id;
 	}
 
 	private void loadRows() {
@@ -59,4 +62,8 @@ public class CustomRowsFragment extends RowsFragment {
 		setAdapter(rowsAdapter);
 	}
 
+	private int getRandomColor() {
+		Random rnd = new Random();
+		return Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
+	}
 }
