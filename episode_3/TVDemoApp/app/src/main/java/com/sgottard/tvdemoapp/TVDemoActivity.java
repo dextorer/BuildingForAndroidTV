@@ -163,7 +163,7 @@ public class TVDemoActivity extends Activity {
 
 				@Override
 				public void onAnimationEnd(Animation animation) {
-					if (doOpen) {
+					if (!doOpen) {
 						rowsFragment.refresh();
 					}
 				}

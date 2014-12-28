@@ -7,6 +7,7 @@ import android.support.v17.leanback.widget.ArrayObjectAdapter;
 import android.support.v17.leanback.widget.HeaderItem;
 import android.support.v17.leanback.widget.ListRow;
 import android.support.v17.leanback.widget.ListRowPresenter;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,9 +27,19 @@ public class CustomRowsFragment extends RowsFragment {
 	private ArrayObjectAdapter rowsAdapter;
 	private CardPresenter cardPresenter;
 
+	// CustomHeadersFragment, scaled by 0.9 on a 1080p screen, is 600px wide.
+	// This is the corresponding dip size.
+	private static final int HEADERS_FRAGMENT_SCALE_SIZE = 300;
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View v = super.onCreateView(inflater, container, savedInstanceState);
+
+		int marginOffset = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, HEADERS_FRAGMENT_SCALE_SIZE, getResources().getDisplayMetrics());
+		ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) v.getLayoutParams();
+		params.rightMargin -= marginOffset;
+		v.setLayoutParams(params);
+
 		v.setBackgroundColor(getRandomColor());
 		return v;
 	}
