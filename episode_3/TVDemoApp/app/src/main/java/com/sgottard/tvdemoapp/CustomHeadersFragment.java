@@ -49,7 +49,7 @@ public class CustomHeadersFragment extends HeadersFragment {
 	}
 
 	private void setCustomPadding() {
-//		getView().setPadding(0, Utils.dpToPx(128, getActivity()), Utils.dpToPx(48, getActivity()), 0);
+		getView().setPadding(0, Utils.dpToPx(128, getActivity()), Utils.dpToPx(48, getActivity()), 0);
 	}
 
 	private OnItemSelectedListener getDefaultItemSelectedListener() {
@@ -58,6 +58,7 @@ public class CustomHeadersFragment extends HeadersFragment {
 			public void onItemSelected(Object o, Row row) {
 				Object obj = ((ListRow) row).getAdapter().get(0);
 				getFragmentManager().beginTransaction().replace(R.id.rows_container, (Fragment) obj).commit();
+				((TVDemoActivity) getActivity()).updateCurrentRowsFragment((CustomRowsFragment) obj);
 			}
 		};
 	}

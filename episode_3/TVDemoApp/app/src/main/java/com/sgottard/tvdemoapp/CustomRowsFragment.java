@@ -39,7 +39,7 @@ public class CustomRowsFragment extends RowsFragment {
 
 		loadRows();
 
-//		setCustomPadding();
+		setCustomPadding();
 	}
 
 	private void loadRows() {
@@ -71,5 +71,9 @@ public class CustomRowsFragment extends RowsFragment {
 	private int getRandomColor() {
 		Random rnd = new Random();
 		return Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
+	}
+
+	public void refresh() {
+		getView().setPadding(Utils.dpToPx(-24, getActivity()), Utils.dpToPx(128, getActivity()), Utils.dpToPx(300, getActivity()), 0);
 	}
 }
