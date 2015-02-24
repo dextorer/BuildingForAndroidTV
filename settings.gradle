@@ -1,0 +1,6 @@
+include ':episode_1:TVDemoApp:app'
+//project(':episode_1:TVDemoApp:app').projectDir = new File(settingsDir, 'episode_1/TVDemoApp/app')
+include ':episode_2:TVDemoApp:app'
+//project(':episode_2:TVDemoApp:app').projectDir = new File(settingsDir, 'episode_2/TVDemoApp/app')
+include ':episode_3:TVDemoApp:app'
+//project(':episode_3:TVDemoApp:app').projectDir = new File(settingsDir, 'episode_3/TVDemoApp/app')
