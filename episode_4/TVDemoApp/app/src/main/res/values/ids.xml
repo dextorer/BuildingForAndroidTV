@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="settings_category_id" type="id" />
+    <item name="settings_toggle_nav_id" type="id" />
+</resources>
