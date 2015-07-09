@@ -12,5 +12,6 @@ Update 07/09/15
 
 I'm writing an Android TV library, based upon Leanback, that offers you a custom BrowseFragment capable of loading any type of fragment, including support for multiple-rows-per-each-header. If you want to keep up to date on this, feel free to follow me / ping me:
 
-@rotxed
-+SebastianoGottardo
+[Twitter @ rotxed](https://twitter.com/@rotxed)
+
+[Gplus @ SebastianoGottardo](https://plus.google.com/+SebastianoGottardo/posts)
