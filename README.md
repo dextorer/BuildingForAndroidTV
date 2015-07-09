@@ -14,4 +14,4 @@ I'm writing an Android TV library, based upon Leanback, that offers you a custom
 
 [Twitter @ rotxed](https://twitter.com/@rotxed)
 
-[Gplus @ SebastianoGottardo](https://plus.google.com/+SebastianoGottardo/posts)
+[G+ @ SebastianoGottardo](https://plus.google.com/+SebastianoGottardo/posts)
