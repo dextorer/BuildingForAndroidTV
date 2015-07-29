@@ -7,6 +7,13 @@ https://medium.com/building-for-android-tv/
 
 I've taken the sample TV application that is provided with Android's SDK and modified it, in order to showcase different components and to explain how to customize the standard UI components.
 
+Update 29/07/2015
+=================
+
+The library is now complete and available here: https://github.com/dextorer/Sofa
+
+Be sure to try it and let me know your feedbacks!
+
 Update 07/09/15
 ===============
 
